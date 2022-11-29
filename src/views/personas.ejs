@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Page</title>
+    <%- include("partials/head") %>
+  </head>
+  <body>
+    <main>
+      <div class="container-fluid">
+        <h2 class="text-center mt-5">Tabla personas</h2>
+
+        <div class="mt-4">
+          <div class="d-flex flex-row-reverse bd-highlight mb-4 mr-6">
+            <div></div>
+            <a href="/crear">
+              <button type="button" class="btn btn-success">
+                Crear persona
+              </button>
+            </a>
+          </div>
+          <table class="table table-dark table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Cedula</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.forEach(function(user){ %>
+              <tr>
+                <th scope="row">
+                  <a
+                    class="nav-link d-flex align-items-center"
+                    href="<%=  `/editar/${user.cedula}` %>"
+                  >
+                    <%= user.cedula %>
+                  </a>
+                </th>
+                <td><%= user.nombre %></td>
+                <td><%= user.apellido %></td>
+                <td><%= user.telefono %></td>
+                <td><%= user.correo %></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

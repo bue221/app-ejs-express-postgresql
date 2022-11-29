@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Editar</title>
+    <%- include("partials/head") %>
+  </head>
+  <body>
+    <main>
+        <div class="container vh-100 d-flex justify-content-center align-items-center">
+            <div class="card animated flipInY bg-dark p-3 border-secondary">
+              <div class="card-header bg-dark text-white text-center">
+                <h3>PLATAFORMA USUARIOS</h3>
+              </div>
+              <div
+              <h4>Los campos con * son obligatorios.</h4>
+            </div>
+              <div class="card-body">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="cedula">Cedula*</label>
+                    <input class="form-control" type="text" placeholder="Digite su cedula" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="nombre">Nombre:*</label>
+                    <input class="form-control" type="text" placeholder="Digite su nombre" />
+                  </div>
+    
+                  <div class="mb-3">
+                    <label for="apellido">Apellido:*</label>
+                    <input class="form-control" type="text" placeholder="Digite su apellido" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefono">Telefono:*</label>
+                    <input class="form-control" type="text" placeholder="Digite su numero de telefono" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="correo">Correo:</label>
+                    <input class="form-control" type="text" placeholder="Digite su correo" />
+                  </div>
+                  <button class="btn btn-primary btn-block">Editar</button>
+                </form>
+              </div>
+            </div>
+        </div>
+    
+        <%- include("partials/footer") %>
+    </main>
+  </body>
+</html>
